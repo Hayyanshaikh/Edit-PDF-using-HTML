@@ -8,13 +8,20 @@ body {
   background-color: #eee;
   padding-inline: 100px;
   padding-block: 20px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
 }
 .pdf {
+  width: 100%;
   background-color: #fff;
   padding-block: 10px;
   padding-inline: 37px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 30px -10px #0002;
   align-items: center;
 }
 
@@ -31,7 +38,20 @@ body {
   width: 100%;
   object-fit: contain;
 }
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff8b36; /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 5px;
+}
 
+.button:hover {
+  background-color: #ec731c;
+}
 table {
   width: 100%;
   text-align: left;
