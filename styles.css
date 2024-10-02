@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #eee;
+  padding-inline: 100px;
+  padding-block: 20px;
+}
+.pdf {
+  background-color: #fff;
+  padding-block: 10px;
+  padding-inline: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 6px;
+  border-spacing: 0px;
+  border: 1px solid #e5e5e5;
+}
+
+thead tr {
+  border: 1px solid #e57d31;
+  background: #ff8b36;
+  border-radius: 6px 6px 0 0;
+}
+
+th {
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+th:nth-child(2) {
+  text-align: right;
+}
+.table-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+}
+
+.row {
+  align-items: center;
+  flex-direction: row !important;
+}
+
+.gap {
+  gap: 10px !important;
+  padding: 0 0;
+}
+
+label {
+  font-size: 12px;
+  color: #0005;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 14px;
+  color: #202020;
+}
+
+tbody tr {
+  border-top: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+.place-name {
+  font-size: 16px;
+  color: #ff8b36;
+  font-weight: 500;
+}
+
+.trip-place {
+  padding: 12px 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2px;
+}
+
+.trip-place.row {
+  justify-content: space-between !important;
+}
+
+.table-content:has(.trip-place) {
+  padding-top: 0;
+}
+
+.trip-place.row {
+  background-color: #ff8b3622;
+  border: none;
+}
+@media print {
+  @page {
+    margin: 20px 30px;
+  }
+
+  body {
+    background: transparent;
+    padding: 0;
+  }
+
+  .pdf {
+    padding: 0;
+  }
+
+  body:after {
+    content: '';
+    display: none;
+  }
+
+  table {
+    margin-bottom: 0;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+}
